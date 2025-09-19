@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #ff4e50 0%, #f9d423 100%);
+            color: #00f0ff;
+        }
+        .navbar {
+            background: rgba(102, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            box-shadow: 0 4px 16px rgba(255,255,255,0.2);
+        }
+        .navbar a {
+            color: #00f0ff;
+            text-decoration: none;
+            margin: 0 2rem;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.3s ease-in-out;
+        }
+        .navbar a:hover {
+            background: rgba(0,0,50,0.8);
+            color: #fff;
+            box-shadow: 0 0 18px #00f0ff99;
+        }
+        .resume-card {
+            background: rgba(102,0,0,0.8);
+            max-width: 600px;
+            margin: 4rem auto;
+            padding: 2.2rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 0 36px #00f0ff55;
+            border: 2px solid #00f0ff30;
+            animation: floatCard 3s ease-in-out infinite alternate;
+            position: relative;
+        }
+        @keyframes floatCard {
+            from { transform: translateY(0);}
+            to { transform: translateY(-8px);}
+        }
+        .resume-title {
+            font-size: 2.3rem;
+            color: #00f0ff;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 16px #00f0ff;
+            animation: glowTitle 2s ease-in-out infinite alternate;
+        }
+        @keyframes glowTitle {
+            from { text-shadow: 0 0 8px #00f0ff, 0 0 20px #00f0ff80;}
+            to { text-shadow: 0 0 24px #00f0ff, 0 0 40px #00f0ff40;}
+        }
+        .info-row {
+            margin-bottom: 1.2rem;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #00f0ff;
+            font-size: 1.12rem;
+            letter-spacing: 1px;
+            margin-right: 0.7rem;
+        }
+        .skills-list {
+            margin-top: 0.5rem;
+            display: flex;
+            gap: 0.85rem;
+        }
+        .skill-tag {
+            background: linear-gradient(90deg,#1fa2ff,#12d8fa);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 0.3rem 0.9rem;
+            border-radius: 8px;
+            box-shadow: 0 0 8px #12d8fa99;
+            letter-spacing: 1px;
+        }
+        /* Profile pic top-right corner */
+        .profile-pic {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #00f0ff;
+            object-fit: cover;
+            box-shadow: 0 0 15px #00f0ff99;
+        }
+        @media (max-width: 700px) {
+            .resume-card {
+                margin: 1.7rem;
+                padding: 1rem 0.7rem;
+            }
+            .navbar a {
+                margin: 0 0.6rem;
+                font-size: 1rem;
+                padding: 0.4rem 0.5rem;
+            }
+            .resume-title { font-size: 1.4rem; }
+            .profile-pic { width: 60px; height: 60px; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="resume-card">
+        <div class="resume-title">Resume</div>
+        <div class="info-row"><span class="info-label">Name:</span>D.Selvakumar</div>
+        <div class="info-row"><span class="info-label">Email:</span>24ai023@amjaincollege.edu.in</div>
+        <div class="info-row"><span class="info-label">Education:</span>B.Sc Computer Science With Artificial Intelligence</div>
+        <div class="info-row"><span class="info-label">Skills:</span>
+            <div class="skills-list">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">FRONTEND DEVELOPMENT</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

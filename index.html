@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #ff4e50 0%, #f9d423 100%);
+            color: #00f0ff; /* bright blue letters */
+        }
+
+        .navbar {
+            background: rgba(102, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            box-shadow: 0 4px 16px rgba(255,255,255,0.2);
+        }
+
+        .navbar a {
+            color: #00f0ff;
+            text-decoration: none;
+            margin: 0 2rem;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar a:hover {
+            background: rgba(0, 0, 50, 0.8);
+            color: #fff;
+            box-shadow: 0 0 18px #00f0ff99;
+        }
+
+        .dashboard-card {
+            background: rgba(102, 0, 0, 0.8);
+            max-width: 600px;
+            margin: 6rem auto;
+            border-radius: 16px;
+            box-shadow: 0 0 36px #ff000080;
+            text-align: center;
+            padding: 2.5rem 2rem;
+            border: 2px solid #00f0ff50;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dashboard-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 48px #00f0ff80;
+        }
+
+        .dashboard-title {
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #00f0ff;
+            text-shadow: 0 0 12px #00f0ff;
+            margin-bottom: 1rem;
+        }
+
+        .dashboard-desc {
+            font-size: 1.3rem;
+            margin-top: 0.5rem;
+            color: #00f0ff;
+            text-shadow: 0 0 6px #001133a0;
+        }
+
+        @media (max-width: 700px) {
+            .dashboard-card {
+                margin: 1.5rem;
+                padding: 1.2rem 1rem;
+            }
+            .navbar a {
+                margin: 0 0.5rem;
+                font-size: 1rem;
+                padding: 0.4rem 0.5rem;
+            }
+            .dashboard-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="dashboard-card">
+        <div class="dashboard-title" id="greeting">Welcome</div>
+        <div class="dashboard-desc">
+            <span>
+                Hi! I am D.Selvakumar. I am currently pursuing my <b>B.Sc Computer Science with Artificial Intelligence</b>.  
+                My college is <b>AGURCHAND MANMULL JAIN COLLEGE</b>, located in <b>Chennai, Tamil Nadu</b>.<br>
+                Navigate above to access <strong>Certificates</strong>, your <strong>Resume</strong>, or the <strong>Contact</strong> page.
+            </span>
+        </div>
+    </div>
+
+    <script>
+        // Auto-greeting system
+        const greeting = document.getElementById("greeting");
+        const hour = new Date().getHours();
+        if(hour < 12){
+            greeting.innerText = "Good Morning";
+        } else if(hour < 16){
+            greeting.innerText = "Good Afternoon";
+        } else {
+            greeting.innerText = "Good Evening";
+        }
+    </script>
+</body>
+</html>

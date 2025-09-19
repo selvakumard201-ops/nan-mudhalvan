@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #ff4e50 0%, #f9d423 100%);
+            color: #00f0ff;
+        }
+        .navbar {
+            background: rgba(102, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            box-shadow: 0 4px 16px rgba(255,255,255,0.2);
+        }
+        .navbar a {
+            color: #00f0ff;
+            text-decoration: none;
+            margin: 0 2rem;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.3s ease-in-out;
+        }
+        .navbar a:hover {
+            background: rgba(0,0,50,0.8);
+            color: #fff;
+            box-shadow: 0 0 18px #00f0ff99;
+        }
+        .contact-card {
+            background: rgba(102,0,0,0.8);
+            max-width: 550px;
+            margin: 4rem auto;
+            padding: 2rem 2rem 1.2rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 0 36px #00f0ff55;
+            border: 2px solid #00f0ff30;
+            animation: floatCard 3s ease-in-out infinite alternate;
+            position: relative;
+        }
+        @keyframes floatCard {
+            from { transform: translateY(0);}
+            to { transform: translateY(-8px);}
+        }
+        .contact-title {
+            font-size: 2.2rem;
+            color: #00f0ff;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 16px #00f0ff;
+            animation: glowTitle 2s ease-in-out infinite alternate;
+        }
+        @keyframes glowTitle {
+            from { text-shadow: 0 0 8px #00f0ff, 0 0 20px #00f0ff80;}
+            to { text-shadow: 0 0 24px #00f0ff, 0 0 40px #00f0ff40;}
+        }
+        .info-row {
+            margin-bottom: 1.2rem;
+            font-size: 1.13rem;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #00f0ff;
+            letter-spacing: 1px;
+            margin-right: 0.5rem;
+        }
+        .contact-icons {
+            margin-right: 0.7rem;
+            color: #12d8fa;
+            font-size: 1.18rem;
+            vertical-align: middle;
+            filter: drop-shadow(0 0 6px #00f0ff);
+        }
+        .profile-pic {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #00f0ff;
+            object-fit: cover;
+            box-shadow: 0 0 15px #00f0ff99;
+        }
+        @media (max-width: 700px) {
+            .contact-card {
+                margin: 1.5rem;
+                padding: 1rem 0.7rem;
+            }
+            .navbar a {
+                margin: 0 0.6rem;
+                font-size: 1rem;
+                padding: 0.4rem 0.5rem;
+            }
+            .contact-title { font-size: 1.3rem; }
+            .profile-pic { width: 60px; height: 60px; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="contact-card">
+        <div class="contact-title">Contact</div>
+        <div class="info-row">
+            <span class="contact-icons"><i class="fas fa-envelope"></i></span>
+            <span class="info-label">Email:</span>24ai023@amjaincollege.edu.in
+        </div>
+        <div class="info-row">
+            <span class="contact-icons"><i class="fas fa-phone"></i></span>
+            <span class="info-label">Phone:</span>+91 63695 09020
+        </div>
+        <div class="info-row">
+            <span class="contact-icons"><i class="fas fa-map-marker-alt"></i></span>
+            <span class="info-label">Location:</span>Chennai, India
+        </div>
+    </div>
+</body>
+</html>

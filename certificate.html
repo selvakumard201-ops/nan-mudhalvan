@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Certificates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #ff4e50 0%, #f9d423 100%);
+            color: #00f0ff;
+            overflow-x: hidden;
+        }
+        .navbar {
+            background: rgba(102, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            box-shadow: 0 4px 16px rgba(255,255,255,0.2);
+        }
+        .navbar a {
+            color: #00f0ff;
+            text-decoration: none;
+            margin: 0 2rem;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.3s ease-in-out;
+        }
+        .navbar a:hover {
+            background: rgba(0,0,50,0.8);
+            color: #fff;
+            box-shadow: 0 0 18px #00f0ff99;
+        }
+        .certificate-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3rem;
+        }
+        .title-cert {
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: #00f0ff;
+            text-shadow: 0 0 14px #00f0ff;
+            margin-bottom: 2.5rem;
+            animation: glowTitle 2s ease-in-out infinite alternate;
+        }
+        @keyframes glowTitle {
+            from { text-shadow: 0 0 8px #00f0ff, 0 0 20px #00f0ff80; }
+            to { text-shadow: 0 0 24px #00f0ff, 0 0 40px #00f0ff40; }
+        }
+        .cert-card {
+            background: rgba(102,0,0,0.8);
+            min-width: 320px;
+            max-width: 480px;
+            margin-bottom: 1.8rem;
+            padding: 1.5rem 1.8rem;
+            border-radius: 14px;
+            box-shadow: 0 0 16px #00f0ff88, 0 0 2px #00f0ff70 inset;
+            position: relative;
+            animation: floatCard 3s ease-in-out infinite alternate;
+            border: 1.5px solid #00f0ff50;
+        }
+        @keyframes floatCard {
+            from { transform: translateY(0);}
+            to { transform: translateY(-10px);}
+        }
+        .cert-icon {
+            font-size: 2rem;
+            color: #00f0ff;
+            position: absolute;
+            top: -1.2rem;
+            left: 1.2rem;
+            filter: drop-shadow(0 0 8px #00f0ff);
+        }
+        .cert-title {
+            font-size: 1.32rem;
+            font-weight: bold;
+            color: #00f0ff;
+            margin-left: 2.5rem;
+            margin-bottom: 0.2rem;
+            letter-spacing: 1px;
+        }
+        .cert-desc {
+            color: #b3ffff;
+            font-size: 1rem;
+            margin-left: 2.5rem;
+        }
+        .profile-pic {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #00f0ff;
+            object-fit: cover;
+            box-shadow: 0 0 15px #00f0ff99;
+        }
+        @media (max-width: 700px) {
+            .cert-card { min-width: 90vw; padding: 1rem 0.6rem; }
+            .navbar a { margin: 0 0.5rem; font-size: 1rem; padding: 0.4rem 0.5rem; }
+            .title-cert { font-size: 1.5rem; }
+            .profile-pic { width: 60px; height: 60px; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="certificate-section">
+        <div class="title-cert">Certificates</div>
+        <div class="cert-card">
+            <div class="cert-title">HTML Fundamentals</div>
+            <div class="cert-desc">Core concepts of HTML for modern web development.</div>
+        </div>
+        <div class="cert-card">
+            <div class="cert-title">CSS Advanced</div>
+            <div class="cert-desc">Master advanced styling, animation, and layouts using CSS.</div>
+        </div>
+        <div class="cert-card">
+            <div class="cert-title">JavaScript Essentials</div>
+            <div class="cert-desc">Essential programming knowledge for web interactivity.</div>
+        </div>
+        <div class="cert-card">
+            <div class="cert-title">FRONT END DEVELOPMENT</div>
+            <div class="cert-desc">Programming for communicating with computer & users.</div>
+        </div>
+    </div>
+</body>
+</html>
